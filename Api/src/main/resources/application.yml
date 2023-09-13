@@ -1,16 +1,19 @@
 spring:
   profiles:
-    active: dev
+    active: local
     group:
       local:
         - infra-local
         - commons-local
+        - domain-local
       dev:
-        - infra-local
-        - common-local
+        - infra-dev
+        - common-dev
+        - domain-dev
     include:
       - infra
       - common
+      - domain
   mvc:
     static-path-pattern: static/**
   servlet:

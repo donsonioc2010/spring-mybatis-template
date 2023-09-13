@@ -2,3 +2,4 @@ rootProject.name = 'jsp-spring-template'
 include('Api')
 include('Common')
 include('Infra')
+include('Domain')

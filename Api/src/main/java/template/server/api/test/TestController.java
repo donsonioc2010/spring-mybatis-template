@@ -17,20 +17,9 @@ import java.util.List;
 @RestController
 public class TestController {
     private final TestMessage testMessage;
-    private final TestDao testDao;
 
     @GetMapping
     public String rtnMsg() {
         return testMessage.toString();
-    }
-
-    @GetMapping("/db")
-    public ResponseEntity<List> rtnList() {
-        return ResponseEntity.ok(testDao.testList());
-    }
-
-    @GetMapping("/insdb")
-    public ResponseEntity<Integer> rtnNumber(@RequestParam("a") String a) {
-        return ResponseEntity.ok(testDao.testInsert(a));
     }
 }
